@@ -1,6 +1,7 @@
 package br.com.rfb.web.rest.errors;
 
 import br.com.rfb.RfbloyaltyApp;
+import br.com.rfb.config.TestSecurityConfiguration;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,7 +22,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 @WithMockUser
 @AutoConfigureMockMvc
-@SpringBootTest(classes = RfbloyaltyApp.class)
+@SpringBootTest(classes = {RfbloyaltyApp.class, TestSecurityConfiguration.class})
 public class ExceptionTranslatorIT {
 
     @Autowired

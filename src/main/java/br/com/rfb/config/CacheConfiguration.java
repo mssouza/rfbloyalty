@@ -42,8 +42,6 @@ public class CacheConfiguration {
             createCache(cm, br.com.rfb.domain.User.class.getName());
             createCache(cm, br.com.rfb.domain.Authority.class.getName());
             createCache(cm, br.com.rfb.domain.User.class.getName() + ".authorities");
-            createCache(cm, br.com.rfb.domain.PersistentToken.class.getName());
-            createCache(cm, br.com.rfb.domain.User.class.getName() + ".persistentTokens");
             // jhipster-needle-ehcache-add-entry
         };
     }

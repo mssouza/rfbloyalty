@@ -3,6 +3,7 @@ package br.com.rfb.repository;
 import br.com.rfb.RfbloyaltyApp;
 
 import br.com.rfb.config.Constants;
+import br.com.rfb.config.TestSecurityConfiguration;
 import br.com.rfb.config.audit.AuditEventConverter;
 import br.com.rfb.domain.PersistentAuditEvent;
 import org.junit.jupiter.api.BeforeEach;
@@ -28,7 +29,7 @@ import static br.com.rfb.repository.CustomAuditEventRepository.EVENT_DATA_COLUMN
 /**
  * Integration tests for {@link CustomAuditEventRepository}.
  */
-@SpringBootTest(classes = RfbloyaltyApp.class)
+@SpringBootTest(classes = {RfbloyaltyApp.class, TestSecurityConfiguration.class})
 @Transactional
 public class CustomAuditEventRepositoryIT {
 

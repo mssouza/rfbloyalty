@@ -87,13 +87,9 @@ jhipster:
     allowed-origins: '*'
     allowed-methods: '*'
     allowed-headers: '*'
-    exposed-headers: 'Link,X-Total-Count'
+    exposed-headers: 'Authorization,Link,X-Total-Count'
     allow-credentials: true
     max-age: 1800
-  security:
-    remember-me:
-      # security key (this key should be unique for your application, and kept secret)
-      key: d6bc2daa8734a36dc719e1bbd3a9184766bbd9917cdd0a752f538e3bf82509fbec4c32297921ab5826fdad92bce2a691ae4a
   mail: # specific JHipster mail property, for standard properties see MailProperties
     base-url: http://127.0.0.1:8080
   metrics:

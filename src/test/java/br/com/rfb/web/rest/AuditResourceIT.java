@@ -1,6 +1,7 @@
 package br.com.rfb.web.rest;
 
 import br.com.rfb.RfbloyaltyApp;
+import br.com.rfb.config.TestSecurityConfiguration;
 import io.github.jhipster.config.JHipsterProperties;
 import br.com.rfb.config.audit.AuditEventConverter;
 import br.com.rfb.domain.PersistentAuditEvent;
@@ -36,7 +37,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 @AutoConfigureMockMvc
 @WithMockUser(authorities = AuthoritiesConstants.ADMIN)
-@SpringBootTest(classes = RfbloyaltyApp.class)
+@SpringBootTest(classes = {RfbloyaltyApp.class, TestSecurityConfiguration.class})
 @Transactional
 public class AuditResourceIT {
 
